@@ -21,9 +21,9 @@ public class PatrolState : BaseState
 
     public void PatrolCycle()
     {
-        if (enemy.Agent.remainingDistance < 0.2f)
+        if (_enemy.Agent.remainingDistance < 0.2f)
         {
-            if (waypointIndex < enemy.path.waypoints.Count - 1)
+            if (waypointIndex < _enemy.path.waypoints.Count - 1)
             {
                 waypointIndex++;
             } else
@@ -31,7 +31,7 @@ public class PatrolState : BaseState
                 waypointIndex = 0;
             }
             Debug.Log(waypointIndex);
-            enemy.Agent.SetDestination(enemy.path.waypoints[waypointIndex].position);
+            _enemy.Agent.SetDestination(_enemy.path.waypoints[waypointIndex].position);
         }
     }
 }

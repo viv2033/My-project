@@ -32,8 +32,8 @@ public class StateMachine : MonoBehaviour
 
         if (activeState != null)
         {
-            activeState.stateMachine = this;
-            activeState.enemy = GetComponent<Enemy>();
+            activeState._stateMachine = this;
+            activeState._enemy = GetComponent<Enemy>();
             activeState.Enter();
         }
     }
