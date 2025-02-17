@@ -12,7 +12,6 @@ public class CameraController : MonoBehaviour
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-
     }
 
     public void ProcessLook(Vector2 input)

@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Statistics")]
+    [SerializeField] private float hp = 100f;
     [SerializeField] private float speed = 10f;
     [SerializeField] private float gravity = -10f;
 
@@ -23,4 +25,10 @@ public class PlayerController : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
+
+    public void UpdateHp(float num)
+    {
+        hp = hp + num;
+    }
+
 }
